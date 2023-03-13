@@ -1,6 +1,6 @@
 {
   "name": "resumeproject",
-  "version": "1.0.0",git
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node ./index.js",
