@@ -1,0 +1,167 @@
+<main>
+  <section>
+    {{> title data='Program'}}
+    <ul>
+      <li>program
+        <ul>
+          <div>
+            <br>
+            <li>excursion
+              {{#with program.excursion}}
+              <div>
+                <br>
+                <ul>
+                  <li>{{name}}</li>
+                  <li>location
+                    <div>
+                      <br>
+                      <ul>
+                        {{#with location}}
+                        <li>{{city}}</li>
+                        <li>{{country}}</li>
+                        {{/with}}
+                      </ul>
+                      <br>
+                    </div>
+                  </li>
+                  <li>{{date}}</li>
+                  <li>program
+                    <div>
+                      <br>
+                      {{#with program .[0]}}
+                      <ul>
+                        <li>{{name}}</li>
+                        <li>{{type}}</li>
+                        <li>{{duration}}</li>
+                        <li>details
+                          <div>
+                            <br>
+                            <ul>
+                              <li>museum
+                                <div>
+                                  <br>
+                                  {{#with details.museum}}
+                                  <ul>
+                                    <li>{{name}}</li>
+                                    <li>location
+                                      <div>
+                                        <br>
+                                        <ul>
+                                          {{#each location}}
+                                          <li>{{this}}</li>
+                                          {{/each}}
+                                        </ul>
+                                        <br>
+                                      </div>
+                                    </li>
+                                    <li>exhibits
+                                      <div>
+                                        <br>
+                                        <ul>
+                                          {{#each exhibits.[0]}}
+                                          <li>{{this}}</li>
+                                          {{/each}}
+                                          {{#each exhibits.[1]}}
+                                          <li>{{this}}</li>
+                                          {{/each}}
+                                        </ul>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                  {{/with}}
+                                  <br>
+                                </div>
+                              </li>
+                              <li>guide
+                                <div>
+                                  <br>
+                                  {{#with details}}
+                                  <ul>
+                                    {{#each guide}}
+                                    <li>{{this}}</li>
+                                    {{/each}}
+                                  </ul>
+                                  {{/with}}
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                      <br>
+                      {{/with}}
+                      {{#with program .[1]}}
+                      <ul>
+                        <li>{{name}}</li>
+                        <li>{{type}}</li>
+                        <li>{{duration}}</li>
+                        <li>details
+                          <div>
+                            <br>
+                            <ul>
+                              {{#with details.venue}}
+                              <li>venue
+                                <div>
+                                  <br>
+                                  <ul>
+                                    <li>{{name}}</li>
+                                    <li>location
+                                      <div>
+                                        <br>
+                                        <ul>
+                                          {{#each location}}
+                                          <li>{{this}}</li>
+                                          {{/each}}
+                                        </ul>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+                              <br>
+                              {{/with}}
+                              {{#with details}}
+                              <li>performers
+                                <div>
+                                  <br>
+                                  <ul>
+                                    {{#each performers.[0]}}
+                                    <li>{{this}}</li>
+                                    {{/each}}
+                                    {{#each performers.[1]}}
+                                    <li>{{this}}</li>
+                                    {{/each}}
+                                  </ul>
+                                  <br>
+                                </div>
+                              </li>
+                              <li>guide
+                                <div>
+                                  <br>
+                                  <ul>
+                                    {{#each guide}}
+                                    <li>{{this}}</li>
+                                    {{/each}}
+                                  </ul>
+                                </div>
+                              </li>
+                              {{/with}}
+                            </ul>
+
+                          </div>
+                        </li>
+                      </ul>
+                      {{/with}}
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              {{/with}}
+            </li>
+          </div>
+        </ul>
+      </li>
+    </ul>
+
+  </section>
+</main>
