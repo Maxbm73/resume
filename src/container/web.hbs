@@ -1,0 +1,164 @@
+<main>
+  {{> title data='Web'}}
+  <div>
+    <ul>
+      <li>web
+        <div>
+          <ul>
+            <li>languages
+              <div>
+                <br>
+                {{#with web.languages.[0]}}
+                <ul>
+                  <li>{{name}}</li>
+                  <li>{{version}}</li>
+                  <li>{{description}}</li>
+                  <li>elements
+                    <div>
+                      <br>
+                      {{#with elements.[0]}}
+                      <ul>
+                        <li>{{name}}</li>
+                        <li>{{description}}</li>
+                        <li>attributes
+                          <div>
+                            <br>
+                            <ul>
+                              {{#each attributes.[0]}}
+                              <li>{{this}}</li>
+                              {{/each}}
+                              {{#each attributes.[1]}}
+                              <li>{{this}}</li>
+                              {{/each}}
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                      {{/with}}
+                      {{#with elements.[1]}}
+                      <ul>
+                        <li>{{name}}</li>
+                        <li>{{description}}</li>
+                        <li>attributes
+                          <div>
+                            <br>
+                            <ul>
+                              {{#each attributes.[0]}}
+                              <li>{{this}}</li>
+                              {{/each}}
+                              {{#each attributes.[1]}}
+                              <li>{{this}}</li>
+                              {{/each}}
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                      {{/with}}
+                    </div>
+                  </li>
+
+                </ul>
+                {{/with}}
+                {{#with web.languages.[1]}}
+                <ul>
+                  <li>{{name}}</li>
+                  <li>{{version}}</li>
+                  <li>{{description}}</li>
+                  <li>properties
+                    <div>
+                      <br>
+                      {{#with properties.[0]}}
+                      <ul>
+                        <li>{{name}}</li>
+                        <li>{{description}}</li>
+                        <li>values
+                          <div>
+                            <br>
+                            <ul>
+                              {{#each values.[0]}}
+                              <li>{{this}}</li>
+                              {{/each}}
+                              {{#each values.[1]}}
+                              <li>{{this}}</li>
+                              {{/each}}
+                            </ul>
+                            <br>
+                          </div>
+                        </li>
+                      </ul>
+                      {{/with}}
+                      {{#with properties.[1]}}
+                      <ul>
+                        <li>{{name}}</li>
+                        <li>{{description}}</li>
+                        <li>values
+                          <div>
+                            <br>
+                            <ul>
+                              {{#each values.[0]}}
+                              <li>{{this}}</li>
+                              {{/each}}
+                              {{#each values.[1]}}
+                              <li>{{this}}</li>
+                              {{/each}}
+                            </ul>
+                            <br>
+                          </div>
+                        </li>
+                      </ul>
+                      {{/with}}
+                    </div>
+                  </li>
+                </ul>
+                {{/with}}
+                {{#with web.languages.[2]}}
+                <ul>
+                  <li>{{name}}</li>
+                  <li>{{version}}</li>
+                  <li>{{description}}</li>
+                  <li>functions
+                    {{#with functions.[0]}}
+                    <ul>
+                      <br>
+                      <li>{{name}}</li>
+                      <li>{{description}}</li>
+                      <li>parameters
+                        <div>
+                          <br>
+                          <ul>
+                            {{#each parameters.[0]}}
+                            <li>{{this}}</li>
+                            {{/each}}
+                          </ul>
+                          <br>
+                        </div>
+                      </li>
+                    </ul>
+                    {{/with}}
+                    {{#with functions.[1]}}
+                    <ul>
+                      <li>{{name}}</li>
+                      <li>{{description}}</li>
+                      <li>parameters
+                        <div>
+                          <br>
+                          <ul>
+                            {{#each parameters.[0]}}
+                            <li>{{this}}</li>
+                            {{/each}}
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                    {{/with}}
+                  </li>
+                </ul>
+                {{/with}}
+              </div>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</main>
