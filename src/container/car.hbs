@@ -1,0 +1,121 @@
+<main>
+  {{> title data='Car'}}
+
+  <div>
+    <ul>
+      <li>{{make}}</li>
+      <li>{{model}}</li>
+      <li>{{year}}</li>
+      <li>{{color}}</li>
+      <li>features
+        <div>
+          <ul>
+            <br>
+            <li>interior
+              <div>
+                {{#with features.interior}}
+                <ul>
+                  <br>
+                  <li>seats
+                    {{> ul value=seats}}
+                  </li>
+                  <br>
+                  <li>dashboard
+                    <div>
+                      <br>
+                      {{#with dashboard}}
+                      <ul>
+                        <li>{{material}}</li>
+                        <li>{{color}}</li>
+                        <li>display
+                          {{> ul value=display}}
+                        </li>
+                      </ul>
+                      {{/with}}
+                    </div>
+                  </li>
+                  <li>audio
+                    {{> ul value=audio}}
+                  </li>
+                </ul>
+                {{/with}}
+              </div>
+            </li>
+            <li>exterior
+              <div>
+                <br>
+                {{#with features.exterior}}
+                <ul>
+                  <li>wheels
+                    {{> ul value=wheels}}
+                  </li>
+                  <br>
+                  <li>headlights
+                    {{> ul value=headlights}}
+                  </li>
+                  <br>
+                  <li>sunroof
+                    {{> ul value=sunroof}}
+                  </li>
+                </ul>
+                {{/with}}
+              </div>
+            </li>
+            <li>safety
+              <div>
+                <br>
+                {{#with features.safety}}
+                <ul>
+                  <li>airbags
+                    {{> ul value=airbags}}
+                  </li>
+                  <br>
+                  <li>assistance
+                    {{> ul value=assistance}}
+                  </li>
+                </ul>
+                {{/with}}
+              </div>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li>engine
+        <div>
+          <br>
+          {{#with engine}}
+          <ul>
+            <li>{{type}}</li>
+            <li>{{displacement}}</li>
+            <li>{{horsepower}}</li>
+            <li>{{torque}}</li>
+            <li>transmission
+              {{> ul value=transmission}}
+            </li>
+          </ul>
+          {{/with}}
+        </div>
+      </li>
+      <br>
+      <li>fuel_economy
+        {{> ul value=fuel_economy}}
+      </li>
+      <li>price
+        <div>
+          <br>
+          {{#with price}}
+          <ul>
+            <li>{{base}}</li>
+            <li>{{destination}}</li>
+            <li>options
+              {{> ul value=options}}
+            </li>
+            <br>
+            <li>{{total}}</li>
+          </ul>
+          {{/with}}
+        </div>
+      </li>
+    </ul>
+  </div>
+</main>
