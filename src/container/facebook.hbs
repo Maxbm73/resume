@@ -1,0 +1,148 @@
+<main>
+  <section>
+    {{> title data='Facebook'}}
+
+    <div>
+      <ul>
+        <li>{{name}}</li>
+        <li>users
+          <div>
+            <br>
+
+            <ul>
+              {{#with users.[0]}}
+              <li>{{id}}</li>
+              <li>{{name}}</li>
+              <li>{{gender}}</li>
+              <li>{{age}}</li>
+              <li>friends
+                <div>
+                  <br>
+
+                  <ul>
+                    {{#with friends.[0]}}
+                    <li>{{id}}</li>
+                    <li>{{name}}</li>
+                    <li>{{gender}}</li>
+                    <li>{{age}}</li>
+                    <li>mutual_friends
+                      {{> ul value=mutual_friends.[0]}}
+                    </li>
+                    {{/with}}
+                    {{#with friends.[1]}}
+                    <li>{{id}}</li>
+                    <li>{{name}}</li>
+                    <li>{{gender}}</li>
+                    <li>{{age}}</li>
+                    <li>mutual_friends
+                      {{> ul value=mutual_friends.[0]}}
+                    </li>
+                    {{/with}}
+                  </ul>
+
+                </div>
+              </li>
+              <li>groups
+                <div>
+
+                  <ul>
+                    {{#with groups.[0]}}
+                    <li>{{id}}</li>
+                    <li>{{name}}</li>
+                    <li>{{description}}</li>
+                    <li>members
+                      {{> ul value=members.[0]}}
+                    </li>
+                    {{/with}}
+                    {{#with groups.[1]}}
+                    <li>{{id}}</li>
+                    <li>{{name}}</li>
+                    <li>{{description}}</li>
+                    <li>members
+                      {{> ul value=members.[0]}}
+                      {{> ul value=members.[1]}}
+                    </li>
+                    {{/with}}
+                  </ul>
+
+                </div>
+              </li>
+              {{/with}}
+              {{#with users.[1]}}
+              <li>{{id}}</li>
+              <li>{{name}}</li>
+              <li>{{gender}}</li>
+              <li>{{age}}</li>
+              <li>friends
+                <div>
+                  <br>
+                  {{#with friends.[0]}}
+                  <ul>
+                    <li>{{id}}</li>
+                    <li>{{name}}</li>
+                    <li>{{gender}}</li>
+                    <li>{{age}}</li>
+                    <li>mutual_friends
+                      <div>
+                        <br>
+                        <ul>
+                          {{#with mutual_friends.[0]}}
+                          <li>{{id}}</li>
+                          <li>{{name}}</li>
+                          <li>{{gender}}</li>
+                          <li>{{age}}</li>
+                          {{/with}}
+                          <br>
+                          {{#with mutual_friends.[1]}}
+                          <li>{{id}}</li>
+                          <li>{{name}}</li>
+                          <li>{{gender}}</li>
+                          <li>{{age}}</li>
+                          <li>mutual_friends
+                            {{> ul value=mutual_friends.[0]}}
+                          </li>
+                          {{/with}}
+                        </ul>
+                      </div>
+
+                    </li>
+                    <li>groups
+                      <div>
+                        <br>
+                        <ul>
+                          {{#with groups.[0]}}
+                          <li>{{id}}</li>
+                          <li>{{name}}</li>
+                          <li>{{description}}</li>
+                          <li>members
+                            {{> ul value=members.[0]}}
+                          </li>
+                          {{/with}}
+                          {{#with groups.[1]}}
+                          <li>{{id}}</li>
+                          <li>{{name}}</li>
+                          <li>{{description}}</li>
+                          <li>members
+                            {{> ul value=members.[0]}}
+                            {{> ul value=members.[1]}}
+                          </li>
+                          {{/with}}
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            {{/with}}
+          </div>
+        </li>
+        {{/with}}
+      </ul>
+
+    </div>
+    </li>
+    </ul>
+    </div>
+  </section>
+</main>
