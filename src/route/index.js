@@ -467,7 +467,6 @@ router.get('/bio', function (req, res) {
   })
 })
 
-
 router.get('/mac', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -548,7 +547,12 @@ router.get('/mac', function (req, res) {
         {
           name: 'USB-C to USB Adapter',
           price: 19.99,
-          
+        },
+      ],
+    },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
 
 // router.get Створює нам один ентпоїнт
 
@@ -646,6 +650,9 @@ router.get('/car', function (req, res) {
       },
       total: 28990,
     },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
 
 router.get('/program', function (req, res) {
   //              cюди вводимо назву файлу з сontainer
@@ -861,9 +868,7 @@ router.get('/web', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
-})
-
- //facebook
+//facebook
 router.get('/facebook', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -1015,8 +1020,12 @@ router.get('/facebook', function (req, res) {
             ],
           },
         ],
-        
-        
+      },
+    ],
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
 router.get('/js', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -1090,20 +1099,11 @@ router.get('/js', function (req, res) {
       {
         name: 'CSS-Tricks',
         type: 'blog',
-
       },
     ],
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-
-
-
-
-
-
-
-
 
 // Підключаємо роутер до бек-енду
 module.exports = router
