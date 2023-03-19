@@ -1,0 +1,67 @@
+<main>
+
+  <section>
+    {{> title data='Mac'}}
+    <ul>
+      <li>{{name}}</li>
+      <li>{{description}}</li>
+      <li>{{price}}</li>
+      <li>{{category}}</li>
+      <li>features
+        <div>
+          <br>
+          {{#with features}}
+          <ul>
+            <li>processor
+              {{> ul value=processor}}
+            </li>
+            <li>memory
+              {{> ul value=memory}}
+            </li>
+            <li>storage
+              {{> ul value=storage}}
+            </li>
+            <li>display
+              {{> ul value=display}}
+            </li>
+            <li>graphics
+              {{> ul value=graphics}}
+            </li>
+            <li>ports
+              <div>
+                <br>
+                {{#with ports.[0]}}
+                <ul>
+                  <li>{{type}}</li>
+                  <li>{{count}}</li>
+                  <li>features
+                    {{> ul value=features}}
+                  </li>
+                  <li>{{type}}</li>
+                  <li>{{count}}</li>
+                </ul>
+                {{/with}}
+              </div>
+            </li>
+            <br>
+            <li>battery
+              {{> ul value=battery}}
+            </li>
+            <li>{{weight}}</li>
+            <li>dimensions
+              {{> ul value=dimensions}}
+            </li>
+            <li>{{operating_system}}</li>
+            <li>accessories
+              {{> ul value=accessories.[0]}}
+              {{> ul value=accessories.[1]}}
+              {{> ul value=accessories.[2]}}
+            </li>
+          </ul>
+          {{/with}}
+        </div>
+      </li>
+    </ul>
+  </section>
+
+</main>
