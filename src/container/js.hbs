@@ -1,0 +1,106 @@
+<main>
+  {{>title data='JavaScript' big=true}}
+  {{>title data=description big=false}}
+
+  <div>
+    <br>
+    <ul>
+      <li>history
+        <div>
+          <br>
+          <ul>
+            {{#each history}}
+            <li>{{this}}</li>
+            {{/each}}
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <ul>
+      <li>types
+        {{> ul value=types}}
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <ul>
+      <li>syntax
+        <div>
+          {{#with syntax}}
+          <ul>
+            <br>
+            <li>variables
+              {{> ul value=variables}}
+            </li>
+            <br>
+            <li>functions
+              {{> ul value=functions}}
+            </li>
+            <br>
+            <li>conditionals
+              {{> ul value=conditionals}}
+            </li>
+            <br>
+            <li>loops
+              {{> ul value=loops}}
+            </li>
+            <br>
+            <li>classes
+              {{> ul value=classes}}
+            </li>
+          </ul>
+          {{/with}}
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <ul>
+      <li>tools
+        {{> ul value=features}}
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <ul>
+      <li>tools
+        {{> ul value=libraries}}
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <ul>
+      <li>tools
+        {{> ul value=tools}}
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <p>
+      <nobr>
+        {{#each community.[0]}}
+        <button type="button" class="btn btn-primary">{{this}}</button>
+        {{/each}}
+        {{#each community.[1]}}
+        <button type="button" class="btn btn-success">{{this}}</button>
+        {{/each}}
+        {{#each community.[2]}}
+        <button type="button" class="btn btn-danger">{{this}}</button>
+        {{/each}}
+        {{#each community.[3]}}
+        <button type="button" class="btn btn-warning">{{this}}</button>
+        {{/each}}
+      </nobr>
+    </p>
+
+  </div>
+
+</main>
