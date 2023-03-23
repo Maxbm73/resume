@@ -4,7 +4,7 @@
     <main>
         <section>
             {{> title big=true data="My educations"}}
-            <ul>
+            <ul class="ms-5">
                 {{#each educations.name}}
                 <li>{{education}}</li>
                 {{#unless isEnd includeZero=true}} (ще в процесі) {{/unless}}
@@ -14,7 +14,7 @@
 
         <section>
             {{> title big=false data="My sertificates"}}
-            <ul>
+            <ul class="ms-5">
                 {{#each certificates}}
                 <li>{{name}}
                     {{#if inStock}} (ID: {{id}}) {{/if}}
