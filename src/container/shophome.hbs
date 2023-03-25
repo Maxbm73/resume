@@ -1,0 +1,429 @@
+<main class="mx-2">
+    {{!--
+    <hr> --}}
+    <div class="row border rounded-2">
+
+
+        <div class="col-4">
+            <h1>Shop</h1>
+        </div>
+
+
+
+        <div class="col-7 ms-5">
+            <ul class="nav justify-content-end ms-4 pt-2 ps-3">
+
+                {{#with navigation}}
+                {{#each links}}
+                <li class="nav-item">
+                    <a href="{{href}}" class="nav-link text-end">{{text}}</a>
+                </li>
+                {{/each}}
+                <li class="nav-item nav-link disabled">{{Logo}}</li>
+
+                {{/with}}
+
+            </ul>
+        </div>
+
+
+    </div>
+    {{!--
+    <hr> --}}
+
+    <div class="mt-5 pb-5">
+        {{#with newsBlock}}
+        <h2 class="text-center pb-2">{{title}}</h2>
+        <div class="row g-2 ">
+
+            <div class="col-3">
+                {{#with cards.[0]}}
+                <div class="card text-bg-secondary">
+                    <div class="card-header">{{title}}
+                        {{#if isNew}}
+                        <span class="badge rounded-pill text-bg-success">Нова</span>
+                        {{/if}}
+                        {{#if isTop}}
+                        <span class="badge rounded-pill text-bg-danger">Toп</span>
+                        {{/if}}
+                    </div>
+                    <div class="card-body">{{description}}</div>
+                </div>
+                {{/with}}
+            </div>
+
+            <div class="col-3">
+                {{#with cards.[1]}}
+                <div class="card text-bg-secondary">
+                    <div class="card-header">{{title}}
+                        {{#if isNew}}
+                        <span class="badge rounded-pill text-bg-success">Нова</span>
+                        {{/if}}
+                        {{#if isTop}}
+                        <span class="badge rounded-pill text-bg-danger">Toп</span>
+                        {{/if}}
+                    </div>
+                    <div class="card-body">{{description}}</div>
+                </div>
+                {{/with}}
+            </div>
+
+            <div class="col-3">
+                {{#with cards.[2]}}
+                <div class="card text-bg-secondary">
+                    <div class="card-header">{{title}}
+                        {{#if isNew}}
+                        <span class="badge rounded-pill text-bg-success">Нова</span>
+                        {{/if}}
+                        {{#if isTop}}
+                        <span class="badge rounded-pill text-bg-danger">Toп</span>
+                        {{/if}}
+                    </div>
+                    <div class="card-body">{{description}}</div>
+                </div>
+                {{/with}}
+            </div>
+
+            <div class="col-3">
+                {{#with cards.[3]}}
+                <div class="card text-bg-secondary">
+                    <div class="card-header">{{title}}
+                        {{#if isNew}}
+                        <span class="badge rounded-pill text-bg-success">Нова</span>
+                        {{/if}}
+                        {{#if isTop}}
+                        <span class="badge rounded-pill text-bg-danger">Toп</span>
+                        {{/if}}
+                    </div>
+                    <div class="card-body">{{description}}</div>
+                </div>
+                {{/with}}
+            </div>
+
+            <div class="col-3">
+                {{#with cards.[4]}}
+                <div class="card text-bg-secondary">
+                    <div class="card-header">{{title}}
+                        {{#if isNew}}
+                        <span class="badge rounded-pill text-bg-success">Нова</span>
+                        {{/if}}
+                        {{#if isTop}}
+                        <span class="badge rounded-pill text-bg-danger">Toп</span>
+                        {{/if}}
+                    </div>
+                    <div class="card-body">{{description}}</div>
+                </div>
+                {{/with}}
+            </div>
+
+            <div class="col-3">
+                {{#with cards.[5]}}
+                <div class="card text-bg-secondary">
+                    <div class="card-header">{{title}}
+                        {{#if isNew}}
+                        <span class="badge rounded-pill text-bg-success">Нова</span>
+                        {{/if}}
+                        {{#if isTop}}
+                        <span class="badge rounded-pill text-bg-danger">Toп</span>
+                        {{/if}}
+                    </div>
+                    <div class="card-body">{{description}}</div>
+                </div>
+                {{/with}}
+            </div>
+
+            <div class="col-3">
+                {{#with cards.[6]}}
+                <div class="card text-bg-secondary">
+                    <div class="card-header">{{title}}
+                        {{#if isNew}}
+                        <span class="badge rounded-pill text-bg-success">Нова</span>
+                        {{/if}}
+                        {{#if isTop}}
+                        <span class="badge rounded-pill text-bg-danger">Toп</span>
+                        {{/if}}
+                    </div>
+                    <div class="card-body">{{description}}</div>
+                </div>
+                {{/with}}
+            </div>
+
+            <div class="col-3">
+                {{#with cards.[7]}}
+                <div class="card text-bg-secondary">
+                    <div class="card-header">{{title}}
+                        {{#if isNew}}
+                        <span class="badge rounded-pill text-bg-success">Нова</span>
+                        {{/if}}
+                        {{#if isTop}}
+                        <span class="badge rounded-pill text-bg-danger">Toп</span>
+                        {{/if}}
+                    </div>
+                    <div class="card-body">{{description}}</div>
+                </div>
+                {{/with}}
+            </div>
+
+        </div>
+        {{/with}}
+    </div>
+
+    <div>
+        <hr>
+    </div>
+
+    <div class="mt-5 mb-5">
+        {{#with goodsBlock}}
+        <ul class="nav nav-tabs">
+            {{#with tabs.[0]}}
+            <li class="nav-item">
+                <a class="nav-link active" href="#">{{text}}</a>
+            </li>
+            {{/with}}
+            {{#with tabs.[1]}}
+            <li class="nav-item">
+                <a class="nav-link" href="#">{{text}}</a>
+            </li>
+            {{/with}}
+            {{#with tabs.[2]}}
+            <li class="nav-item">
+                <a class="nav-link" href="#">{{text}}</a>
+            </li>
+            {{/with}}
+            {{#with tabs.[3]}}
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">{{text}}</a>
+            </li>
+            {{/with}}
+        </ul>
+        {{/with}}
+    </div>
+
+    <div class="row g-2">
+
+        {{#each goodsBlock.cards}}
+        <div class="col-4">
+            <div class="card">
+                <img src="{{image}}">
+            </div>
+            <div class="card-body py-3">
+                <h6 class="card-title py-3 mx-1">{{title}}
+                    {{#if isHot}}
+                    <span class="badge rounded-pill text-bg-warning">HOT</span>
+                    {{/if}}
+                    {{#if isNew}}
+                    <span class="badge rounded-pill text-bg-primary">Нове</span>
+                    {{/if}}
+                </h6>
+                <p class="mx-1">{{description}}</p>
+            </div>
+        </div>
+        {{/each}}
+        <hr class="mb-5">
+    </div>
+
+    <div class="row text-bg-secondary mt-3 mb-5">
+
+        <div class="col-6">
+            {{#with subscribe}}
+            <p class="h2">{{header}}</p>
+            <p>{{description}}</p>
+            {{/with}}
+        </div>
+
+        <div class="col-6">
+
+            <ul class="nav mt-5 pt-2 ps-4">
+                {{#with subscribe.buttons.[0]}}
+                <li class="nav-item me-2 ms-4">
+                    <a class="nav-link text-bg-primary" href="{{link}}">{{text}}</a>
+                </li>
+                {{/with}}
+
+                {{#with subscribe.buttons.[1]}}
+                <li class="nav-item">
+                    <a class="nav-link text-bg-primary" href="{{link}}">{{text}}</a>
+                </li>
+                {{/with}}
+            </ul>
+
+        </div>
+
+    </div>
+    <hr class="my-3">
+
+    <div class="row my-5">
+        <div class="col-12 text-center text-bg-success pb-3 pt-1">
+            {{#with service}}
+            <p class="h2">{{title}}</p>
+            <p>{{description}}</p>
+            {{#with buttons.[0]}}
+            <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+            {{/with}}
+            {{/with}}
+        </div>
+    </div>
+    <hr>
+
+    <div class="row mb-3">
+
+        <div class="col-2">
+            <div class="col-1">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        {{#with footer.[0].[0]}}
+                        <a href="{{link}}" class="nav-link">{{text}}</a>
+                        {{/with}}
+                    </li>
+
+                    <li class="nav-item">
+                        {{#with footer.[0].[1]}}
+                        <a href="{{link}}" class="nav-link">{{text}}</a>
+                        {{/with}}
+                    </li>
+
+                    <li class="nav-item">
+                        {{#with footer.[0].[2]}}
+                        <a href="{{link}}" class="nav-link">{{text}}</a>
+                        {{/with}}
+                    </li>
+
+
+                    <li>
+                        {{#with footer.[0].[3]}}
+                        <a href="{{link}}" class="nav-link disabled">{{text}}</a>
+                        {{/with}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-2">
+            <div class="col-1">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        {{#with footer.[1].[0]}}
+                        <a href="{{link}}" class="nav-link">{{text}}</a>
+                        {{/with}}
+                    </li>
+
+                    <li class="nav-item">
+                        {{#with footer.[1].[1]}}
+                        <a href="{{link}}" class="nav-link">{{text}}</a>
+                        {{/with}}
+                    </li>
+
+                    <li class="nav-item">
+                        {{#with footer.[1].[2]}}
+                        <a href="{{link}}" class="nav-link">{{text}}</a>
+                        {{/with}}
+                    </li>
+
+
+                    <li>
+                        {{#with footer.[1].[3]}}
+                        <a href="{{link}}" class="nav-link disabled">{{text}}</a>
+                        {{/with}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-2">
+            <div class="col-1">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        {{#with footer.[2].[0]}}
+                        <a href="{{link}}" class="nav-link">{{text}}</a>
+                        {{/with}}
+                    </li>
+
+                    <li class="nav-item">
+                        {{#with footer.[2].[1]}}
+                        <a href="{{link}}" class="nav-link">{{text}}</a>
+                        {{/with}}
+                    </li>
+
+                    <li class="nav-item">
+                        {{#with footer.[2].[2]}}
+                        <a href="{{link}}" class="nav-link">{{text}}</a>
+                        {{/with}}
+                    </li>
+
+
+                    <li>
+                        {{#with footer.[2].[3]}}
+                        <a href="{{link}}" class="nav-link disabled">{{text}}</a>
+                        {{/with}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-2">
+            <div class="col-1">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        {{#with footer.[3].[0]}}
+                        <a href="{{link}}" class="nav-link">{{text}}</a>
+                        {{/with}}
+                    </li>
+
+                    <li class="nav-item">
+                        {{#with footer.[3].[1]}}
+                        <a href="{{link}}" class="nav-link">{{text}}</a>
+                        {{/with}}
+                    </li>
+
+                    <li class="nav-item">
+                        {{#with footer.[3].[2]}}
+                        <a href="{{link}}" class="nav-link">{{text}}</a>
+                        {{/with}}
+                    </li>
+
+
+                    <li>
+                        {{#with footer.[3].[3]}}
+                        <a href="{{link}}" class="nav-link disabled">{{text}}</a>
+                        {{/with}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-2">
+            <div class="col-1">
+                <ul class="nav flex-column">
+
+                    <li class="nav-item">
+                        {{#with footer.[4].[0]}}
+                        <a href="{{link}}" class="nav-link">{{text}}</a>
+                        {{/with}}
+                    </li>
+
+                    <li class="nav-item">
+                        {{#with footer.[4].[1]}}
+                        <a href="{{link}}" class="nav-link">{{text}}</a>
+                        {{/with}}
+                    </li>
+
+                    <li class="nav-item">
+                        {{#with footer.[4].[2]}}
+                        <a href="{{link}}" class="nav-link">{{text}}</a>
+                        {{/with}}
+                    </li>
+
+
+                    <li>
+                        {{#with footer.[4].[3]}}
+                        <a href="{{link}}" class="nav-link disabled">{{text}}</a>
+                        {{/with}}
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</main>
