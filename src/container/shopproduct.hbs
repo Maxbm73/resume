@@ -1,0 +1,133 @@
+<main>
+    <nav>
+        <ol class="breadcrumb py-3 ps-5 ">
+            {{#each breadcrumb}}
+            <li class="breadcrumb-item">
+                <a href="{{url}}">{{name}}</a>
+            </li>
+            {{/each}}
+        </ol>
+    </nav>
+
+    <div class="row mb-3">
+
+        <div class="col-7">
+            <div class="col-11">
+                {{#with productData}}
+                <img src="{{img}}" class="card-img-top mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        {{#with info}}
+                        <h5 class="card-title">{{title}}</h5>
+                        <p>{{about}}</p>
+                        <p class="h4">{{price}}<br>
+                            {{#if category.[0].sHot}}
+                            <span class="badge rounded-pill bg-warning">{{category.[0].name}}</span>
+                            {{/if}}
+                            {{#if category.[1].isNew}}
+                            <span class="badge rounded-pill bg-primary">{{category.[1].name}}</span>
+                            {{/if}}
+                            {{#if category.[2].isBonus}}
+                            <span class="badge rounded-pill bg-info">{{category.[2].name}}</span>
+                            {{/if}}
+                        </p>
+                        {{/with}}
+                    </div>
+
+                </div>
+                {{/with}}
+            </div>
+        </div>
+
+        <div class="col-5">
+            {{#with productData.item}}
+            <table class="table">
+                <thead>
+                    <tr>
+                        {{#each head}}
+                        <th>{{this}}</th>
+                        {{/each}}
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        {{#each body.[0]}}
+                        {{#if @first}}
+                        <th>{{this}}</th>
+                        {{else}}
+                        <td>{{this}}</td>
+                        {{/if}}
+                        {{/each}}
+                    </tr>
+
+                    <tr>
+                        {{#each body.[1]}}
+                        {{#if @first}}
+                        <th>{{this}}</th>
+                        {{else}}
+                        <td>{{this}}</td>
+                        {{/if}}
+                        {{/each}}
+                    </tr>
+
+                    <tr>
+                        {{#each body.[2]}}
+                        {{#if @first}}
+                        <th>{{this}}</th>
+                        {{else}}
+                        <td>{{this}}</td>
+                        {{/if}}
+                        {{/each}}
+                    </tr>
+                </tbody>
+            </table>
+            {{/with}}
+
+
+            <div class="card">
+                {{#with productData}}
+                <ul class="list-group">
+                    {{#each actionList}}
+                    <li class="list-group-item">{{name}}</li>
+                    {{/each}}
+                </ul>
+                {{/with}}
+            </div>
+
+            {{#with productData.alert}}
+            <div class="alert alert-danger mt-3" role="alert">{{text}}
+            </div>
+            {{/with}}
+
+        </div>
+    </div>
+
+    <div class="nav border breadcrumb-item py-2 rounded-2 ps-2 mb-5 mt-4">
+        <button type="button" class="btn btn-warning me-2">Повідомлення</button>
+        <button type="button" class="btn btn-outline-danger me-2">Вподобати</button>
+        <button type="button" class="btn btn-success me-2">Швидка доставка</button>
+        <button type="button" class="btn btn-outline-success me-2">Доставка</button>
+    </div>
+
+    <div class="pb-5"></div>
+    <hr class="mt-5">
+
+    <div class="mt-5">
+        <h3 class="text-center">Інші товари</h3>
+
+        <div class="row g-2">
+            {{#with goodsOtherBlock}}
+            {{#each cards}}
+            <div class="col-4">
+                {{> shopcard}}
+            </div>
+            {{/each}}
+            {{/with}}
+        </div>
+
+    </div>
+    <hr class="mt-5 mb-5">
+    {{> shopaction}}
+    <div cla></div>
+</main>
