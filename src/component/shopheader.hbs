@@ -1,0 +1,29 @@
+<header class="mt-2 mx-2">
+
+    {{#with navigation}}
+    <div class="row border rounded-2">
+        <div class="col-7">
+            <div class="col-12">
+                <h2 class="ms-2 pt-3">{{Logo}}</h2>
+            </div>
+        </div>
+
+
+        <div class="col-5 ps-4">
+
+            <ul class="nav pt-4 ms-0 ps-5">
+                {{#each links}}
+                <li class="nav-item">
+                    <a href="{{href}}" class="nav-link">{{text}}</a>
+                </li>
+                {{/each}}
+                <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    {{/with}}
+
+</header>
