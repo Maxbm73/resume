@@ -1554,7 +1554,7 @@ router.get('/shopproduct', function (req, res) {
         title: 'Product PC Asus 331 BC 671',
         about:
           "Some quick example text to build on the card title and make up the bulk of the card's content.",
-        price: '1000,
+        price: '1000',
 
         category: [
           { name: 'HOT', isHot: true },
@@ -1574,9 +1574,9 @@ router.get('/shopproduct', function (req, res) {
         head: ['#', 'color', 'price'],
 
         body: [
-          ['id312', 'red', '1100],
-          ['id532', 'blue', '1050],
-          ['id643', 'dark', '999],
+          ['id312', 'red', '1100'],
+          ['id532', 'blue', '1050'],
+          ['id643', 'dark', '999'],
         ],
       },
 
@@ -1937,7 +1937,6 @@ router.get('/shopnews', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-
 
 router.get('/shoporder', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -2303,7 +2302,6 @@ router.get('/shoporder', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-
 
 router.get('/shopcart', function (req, res) {
   // res.render генерує нам HTML сторінку

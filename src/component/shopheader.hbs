@@ -10,16 +10,16 @@
                 </div>
             </div>
 
-            <div class="col-5 ps-1">
+            <div class="col-5 pe-0">
 
-                <ul class="nav pt-4 ps-3">
+                <ul class="nav pt-4 ps-0 float-end">
                     {{#each links}}
-                    <li class="nav-item">
-                        <a href="{{href}}" class="nav-link">{{text}}</a>
+                    <li class="nav-item ps-3">
+                        <a href="{{href}}" class="nav-link pe-1">{{text}}</a>
                     </li>
                     {{/each}}
-                    <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
+                    <li class="nav-item ps-3">
+                        <a class="nav-link disabled pe-1">Disabled</a>
                     </li>
                 </ul>
 
