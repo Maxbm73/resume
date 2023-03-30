@@ -1,0 +1,40 @@
+<div class="card mb-3">
+    <div class="row">
+
+        <div class="col-2">
+            <img src="{{image}}" class="my-2 ms-2">
+        </div>
+
+        <div class="col-4 mt-3">
+            <h6 class="h6>">{{name}}</h6>
+            <p>{{description}}</p>
+        </div>
+
+        <div class="col-2 ps-5">
+            {{#with price}}
+            <p class="pt-4 mb-0">{{title}}</p>
+            <p class="pb-0">{{value}}</p>
+            {{/with}}
+        </div>
+
+        <div class="col-2 ps-5">
+            <p class="pt-5">{{amount}}</p>
+        </div>
+
+        <div class="col-2 ps-4">
+            <ul class="nav flex-column mt-4">
+                {{#with buttons.[0]}}
+                <li class="nav-item mb-2">
+                    <button type="button" class="btn btn-primary">{{text}}</button>
+                </li>
+                {{/with}}
+                {{#with buttons.[1]}}
+                <li class="nav-item">
+                    <button type="button" class="btn btn-outline-danger">{{text}}</button>
+                </li>
+                {{/with}}
+            </ul>
+        </div>
+
+    </div>
+</div>
