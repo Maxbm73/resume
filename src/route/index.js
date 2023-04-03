@@ -1523,7 +1523,7 @@ router.get('/shophome', function (req, res) {
 
   //             cюди вводимо назву файлу з сontainer
   res.render('shophome', {
-    layout: 'shop',
+    layout: 'personinf',
     navigation: {
       links: [
         {
@@ -3131,7 +3131,6 @@ router.get('/shopprofile', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
-
 router.get('/shopreview', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -3421,7 +3420,7 @@ router.get('/shopcatalog', function (req, res) {
 
   //             cюди вводимо назву файлу з сontainer
   res.render('shopcatalog', {
-    // layout: 'shop',
+    layout: 'shop',
     navigation: {
       links: [
         {
@@ -3788,7 +3787,6 @@ router.get('/shopcatalog', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-
 
 // Підключаємо роутер до бек-енду
 module.exports = router
