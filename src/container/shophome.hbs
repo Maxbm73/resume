@@ -1,32 +1,30 @@
 <main class="mx-2">
-    {{!--
-    <hr> --}}
-    <div class="row border rounded-2">
+
+    <div class="card mt-5">
+        <div class="row mx-0">
+
+            <div class="col-4">
+                <h1>Shop</h1>
+            </div>
+
+            <div class="col-8 pe-0">
+                <ul class="nav float-end pt-2">
+
+                    {{#with navigation}}
+                    {{#each links}}
+                    <li class="nav-item">
+                        <a href="{{href}}" class="nav-link pe-1">{{text}}</a>
+                    </li>
+                    {{/each}}
+                    <li class="nav-item nav-link disabled pe-1">{{Logo}}</li>
+
+                    {{/with}}
+
+                </ul>
+            </div>
 
 
-        <div class="col-4">
-            <h1>Shop</h1>
         </div>
-
-
-
-        <div class="col-7 ms-5">
-            <ul class="nav justify-content-end ms-4 pt-2 ps-3">
-
-                {{#with navigation}}
-                {{#each links}}
-                <li class="nav-item">
-                    <a href="{{href}}" class="nav-link text-end">{{text}}</a>
-                </li>
-                {{/each}}
-                <li class="nav-item nav-link disabled">{{Logo}}</li>
-
-                {{/with}}
-
-            </ul>
-        </div>
-
-
     </div>
     {{!--
     <hr> --}}
